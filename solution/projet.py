@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 from scrapy import Selector
 from urllib.parse import quote, urlencode
-from solution.config import API_KEY   
+from config import API_KEY   
 
 CITIES = [
     "Paris","Marseille","Lyon","Toulouse","Nice","Nantes","Strasbourg","Montpellier","Bordeaux","Lille",
@@ -106,7 +106,7 @@ print(top5[["city", "weather_score"]])
 # ---------------------- CARTE METEO ----------------------
 top5["size"] = top5["weather_score"].apply(lambda x: max(x, 0.1))
 
-fig_weather = px.scatter_mapbox(
+fig_weather = px.scatter_map(
     top5,
     lat="lat", lon="lon",
     color="weather_score",
