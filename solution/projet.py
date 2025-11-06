@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 from scrapy import Selector
 from urllib.parse import quote, urlencode
-from config import API_KEY   
+from solution.config import API_KEY   
 
 CITIES = [
     "Paris","Marseille","Lyon","Toulouse","Nice","Nantes","Strasbourg","Montpellier","Bordeaux","Lille",
